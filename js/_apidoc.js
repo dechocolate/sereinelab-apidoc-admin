@@ -45,3 +45,8 @@
  * @apiDefine admin This title is visible in version 0.1.0 and 0.2.0
  * @apiVersion 0.1.0
  */
+
+ /**
+ * @apiDefine nowVersion
+ * @apiVersion 0.1.0
+ */
