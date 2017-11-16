@@ -1,10 +1,10 @@
 {
-  "name": "apidoc",
+  "name": "SEREINELAB",
   "version": "0.1.0",
-  "description": "SEREINELAB-ADMIN",
-  "title": "ADMIN restful API",
-  "url" : "http://52.231.200.170:8080/api",
-  "sampleUrl": "http://52.231.200.170:8080/api",
+  "description": "76n1-cms-server restful API",
+  "title": "76n1-cms-server",
+  "url" : "http://52.187.191.13:3001/api",
+  "sampleUrl": "http://52.187.191.13:3001/api",
   "header": {
     "title": "처음으로 이동",
     "filename": "header.md"

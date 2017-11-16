@@ -1,68 +1,31 @@
 
 /**
- * @api                 {get}           /bbs 공지사항/도움말 리스트   
- * @apiVersion          0.1.0
- * @apiName             bbs List
- * @apiGroup            bbs
- *
- * @apiDescription
- * Find all instances of the model matched by filter from the data 
- *
- * @apiSuccess          {String}        type            게시판 종류(공지사항/도움말)
- * @apiSuccess          {String}        title           제목      
- * @apiSuccess          {String}        text            내용
- * @apiSuccess          {Boolean}       display         표시여부            
- * @apiSuccess          {Integer}       count           조회수             
- * @apiSuccess          {Integer}       create          등록 일
- * @apiSuccess          {Integer}        id              Id           
- * 
- * @apiSuccessExample
- *  HTTP/1.1 200 OK
- * [
-    {
-        "type": "공지사항",
-        "title": "공지 제목",
-        "text": "공지 내용",
-        "display": true,
-        "count": 0,
-        "created": "2017-11-15T11:00:18.880Z",
-        "id": 1
-    },
-    {
-        "type": "도움말",
-        "title": "도움말 제목",
-        "text": "도움말 내용",
-        "display": true,
-        "count": 0,
-        "created": "2017-11-15T11:00:18.880Z",
-        "id": 2
-    }
-]
- */
-
-/**
- * @api                 {post}           /bbs 공지사항/도움말 등록 
+ * @api                 {post}           /bbs 게시판 등록 
  * @apiVersion          0.1.0
  * @apiName             bbs regist
- * @apiGroup            bbs
+ * @apiGroup            Bbs
+ * 
+ * @apiPermission       Admin
+ * @apiHeader           {String} 		Authorization value.
+ * @apiHeaderExample    {json}          Header-Example:
+ *  {
+ *    "Authorization": "accessTokenId"
+ *  } 
  *
  * @apiDescription
- * Find all instances of the model matched by filter from the data 
+ * Create a new instance of the model and persist it into the data source.
  *
- * @apiParam          {String}        type            게시판 종류(공지사항/도움말)
+ * @apiParam          {String}        type            게시판 종류 (공지사항=0/도움말=1)
  * @apiParam          {String}        title           제목      
  * @apiParam          {String}        text            내용
- * @apiParam          {Boolean}       display         표시여부            
- * @apiParam          {Integer}       count           조회수             
- * @apiParam          {Integer}       create          등록 일
  * 
- * @apiSuccess          {String}        type            게시판 종류(공지사항/도움말)
+ * @apiSuccess          {ObjectId}        id             게시판 아이디  
+ * @apiSuccess          {Integer}        type           게시판 종류 (공지사항=0/도움말=1)
  * @apiSuccess          {String}        title           제목      
  * @apiSuccess          {String}        text            내용
- * @apiSuccess          {Boolean}       display         표시여부            
- * @apiSuccess          {Integer}       count           조회수             
- * @apiSuccess          {Integer}       create          등록 일
- * @apiSuccess          {Integer}        id              Id  
+ * @apiSuccess          {Boolean}       display         표시여부 (default true)                      
+ * @apiSuccess          {Integer}       count           조회수  (default 0)           
+ * @apiSuccess          {Date}       created            등록 일 (default now())
  * 
  * 
  * @apiSuccessExample
@@ -80,91 +43,104 @@
 */
 
 /**
- * @api                 {get}           /bbs/:id 공지사항/도움말 조회 
+ * @api                 {get}           /bbs/:id 게시판 조회 
  * @apiVersion          0.1.0
  * @apiName             bbs select
- * @apiGroup            bbs
+ * @apiGroup            Bbs
  *
  * @apiDescription
- * Find all instances of the model matched by filter from the data 
+ * Find a model instance by {{id}} from the data source.
  *
- * @apiParam            {Integer}        id              id
+ * @apiParam          {ObjectId}        id             게시판 아이디  
  * 
- * @apiSuccess          {String}        type            게시판 종류(공지사항/도움말)
+ * @apiSuccess          {ObjectId}        id             게시판 아이디
+ * @apiSuccess          {Integer}        type            게시판 종류 (공지사항=0/도움말=1)
  * @apiSuccess          {String}        title           제목      
  * @apiSuccess          {String}        text            내용
  * @apiSuccess          {Boolean}       display         표시여부            
  * @apiSuccess          {Integer}       count           조회수             
- * @apiSuccess          {Integer}       create          등록 일
- * @apiSuccess          {Integer}        id              Id  
+ * @apiSuccess          {Integer}       created          등록 일
+ * 
+ * 
+ * @apiSuccessExample
+ *  HTTP/1.1 200 OK
+ *[
+    {
+		"id": 1
+        "type": "공지사항",
+        "title": "공지 제목",
+        "text": "공지 내용",
+        "display": true,
+        "count": 0,
+        "created": "2017-11-15T11:00:18.880Z",        
+	}
+*] 
+*/
+
+/**
+ * @api                 {put}           /bbs/:id 게시판 수정 
+ * @apiVersion          0.1.0
+ * @apiName             bbs update
+ * @apiGroup            Bbs
+ * 
+ * @apiPermission       Admin
+ * @apiHeader           {String} 		Authorization value.
+ * @apiHeaderExample    {json}          Header-Example:
+ *  {
+ *    "Authorization": "accessTokenId"
+ *  } 
+ *
+ * @apiDescription
+ * Replace attributes for a model instance and persist it into the data source.
+ *
+ * @apiParam          {ObjectId}        id             게시판 아이디  
+ * @apiParam          {Integer}        type           게시판 종류 (공지사항=0/도움말=1)
+ * @apiParam          {String}        title           제목      
+ * @apiParam          {String}        text            내용
+ * @apiParam          {Boolean}       display         표시여부 (default true)        
+ *  
+ * @apiSuccess          {ObjectId}        id             게시판 아이디
+ * @apiSuccess          {Integer}        type            게시판 종류 (공지사항=0/도움말=1)
+ * @apiSuccess          {String}        title           제목      
+ * @apiSuccess          {String}        text            내용
+ * @apiSuccess          {Boolean}       display         표시여부            
+ * @apiSuccess          {Integer}       count           조회수             
+ * @apiSuccess          {Integer}       created          등록 일
  * 
  * 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
  *
     {
-        "type": "공지사항",
+		"id": 1
+        "type": 0,
         "title": "공지 제목",
         "text": "공지 내용",
         "display": true,
         "count": 0,
-        "created": "2017-11-15T11:00:18.880Z",
-        "id": 1
+        "created": "2017-11-15T11:00:18.880Z",    
     }
 */
 
 /**
- * @api                 {put}           /bbs 공지사항/도움말 수정 
- * @apiVersion          0.1.0
- * @apiName             bbs update
- * @apiGroup            bbs
- *
- * @apiDescription
- * Find all instances of the model matched by filter from the data 
- *
- * @apiHeader          {String}        type            게시판 종류(공지사항/도움말)
- * @apiHeader          {String}        title           제목      
- * @apiHeader          {String}        text            내용
- * @apiHeader          {Boolean}       display         표시여부            
- * @apiHeader          {Integer}       count           조회수             
- * @apiHeader          {Integer}       create          등록 일
- * @apiHeader          {Integer}        id              Id 
- *  
- * @apiSuccess          {String}        type            게시판 종류(공지사항/도움말)
- * @apiSuccess          {String}        title           제목      
- * @apiSuccess          {String}        text            내용
- * @apiSuccess          {Boolean}       display         표시여부            
- * @apiSuccess          {Integer}       count           조회수             
- * @apiSuccess          {Integer}       create          등록 일
- * @apiSuccess          {Integer}        id              Id  
- * 
- * 
- * @apiSuccessExample
- *  HTTP/1.1 200 OK
- *
-    {
-        "type": "공지사항",
-        "title": "공지 제목",
-        "text": "공지 내용",
-        "display": true,
-        "count": 0,
-        "created": "2017-11-15T11:00:18.880Z",
-        "id": 1
-    }
-*/
-   
-/**
- * @api                 {delete}           /bbs/:id 공지사항/도움말 삭제 
+ * @api                 {delete}           /bbs/:id 게시판 삭제 
  * @apiVersion          0.1.0
  * @apiName             bbs delete
- * @apiGroup            bbs
+ * @apiGroup            Bbs
+ * 
+ * @apiPermission       Admin
+ * @apiHeader           {String} 		Authorization value.
+ * @apiHeaderExample    {json}          Header-Example:
+ *  {
+ *    "Authorization": "accessTokenId"
+ *  } 
  *
  * @apiDescription
- * Delete a model instance by {{id}} from the data source 
+ * Delete a model instance by {{id}} from the data source.
  * 
- * @apiParam           {Integer}       id               ID
+ * @apiParam          {ObjectId}        id             게시판 아이디  
  * 
- * @apiSuccess          {String}       count            공지사항/도움말 갯수 
+ * @apiSuccess          {String}       count            게시판 삭제갯수 
  * 
  * 
  * @apiSuccessExample

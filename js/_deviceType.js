@@ -3,7 +3,7 @@
  * @api                 {get}           /admins/deviceTypes 기기종류 리스트 
  * @apiVersion          0.1.0
  * @apiName             deviceType List
- * @apiGroup            deviceType
+ * @apiGroup            DeviceType
  *
  * @apiDescription
  * Find all instances of the model matched by filter from the data 
@@ -41,7 +41,7 @@
  * @api                 {get}           /admins/deviceTypes/:id 기기종류 조회
  * @apiVersion          0.1.0
  * @apiName             deviceType Select
- * @apiGroup            deviceType
+ * @apiGroup            DeviceType
  *
  * @apiDescription
  * Find all instances of the model matched by filter from the data 

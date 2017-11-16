@@ -7,19 +7,19 @@
 /**
  * @api                 {post}           /admins/login 관리자 로그인
  * @apiVersion          0.1.0
- * @apiName             Admins Login
- * @apiGroup            Admins
+ * @apiName             admin login
+ * @apiGroup            Admin
  *
  * @apiDescription
  * Login a user with username/email and password
  *
- * @apiParam            {String}        email 	    admin email address.
- * @apiParam            {String}        password 	admin login password.
+ * @apiParam            {String}        email 	    admin email address
+ * @apiParam            {String}        password 	admin login password
  *
- * @apiSuccess          {String}        id          Id.
- * @apiSuccess          {String}        ttl         
- * @apiSuccess          {String}        created     생성 날짜
- * @apiSuccess          {String}        userId      userId. 
+ * @apiSuccess          {String}        id          accessTokenId
+ * @apiSuccess          {String}        ttl         토큰 유효 시간
+ * @apiSuccess          {String}        created     토큰 생성 날짜
+ * @apiSuccess          {String}        userId      userId
  * 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
