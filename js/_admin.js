@@ -1,6 +1,6 @@
 /**
  * @apiDefine adminError
- * @apiError loginError login fail 401
+ * @apiError Error  parameter error 401
  */
 
 
@@ -29,5 +29,22 @@
  *     "created": "2017-11-15T12:55:34.089Z",
  *     "userId": 1
  *  }
+ * @apiUse           adminError
+ */
+
+ /**
+ * @api                 {post}           /admins/login 관리자 로그아웃
+ * @apiVersion          0.1.0
+ * @apiName             admin logout
+ * @apiGroup            Admin
+ *
+ * @apiHeaderExample    {json}          Header-Example:
+ *  {
+ *    "Authorization": "accessTokenId"
+ *  } 
+ * 
+ * @apiDescription
+ * Logout a user with access token
+ *
  * @apiUse           adminError
  */
