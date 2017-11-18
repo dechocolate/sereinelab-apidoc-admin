@@ -15,7 +15,7 @@
  * @apiDescription
  * Create a new instance of the model and persist it into the data source.
  *
- * @apiParam          {String}        type            게시판 종류 (공지사항=0/도움말=1)
+ * @apiParam          {Integer}        type            게시판 종류 (공지사항=0/도움말=1)
  * @apiParam          {String}        title           제목      
  * @apiParam          {String}        text            내용
  * 
@@ -48,6 +48,13 @@
  * @apiName             bbs select
  * @apiGroup            Bbs
  *
+ * @apiPermission       Admin
+ * @apiHeader           {String} 		Authorization value.
+ * @apiHeaderExample    {json}          Header-Example:
+ *  {
+ *    "Authorization": "accessTokenId"
+ *  } 
+ * 
  * @apiDescription
  * Find a model instance by {{id}} from the data source.
  *
