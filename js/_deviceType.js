@@ -1,6 +1,6 @@
 
 /**
- * @api                 {get}           /deviceTypes 기기 종류 등록
+ * @api                 {get}           /deviceTypes a.기기 종류 등록
  * @apiVersion          0.1.0
  * @apiName             deviceType List
  * @apiGroup            DeviceType
@@ -54,7 +54,7 @@
  */
 
  /**
- * @api                 {get}           /deviceTypes/:id 기기 종류 조회
+ * @api                 {get}           /deviceTypes/:id b.기기 종류 조회
  * @apiVersion          0.1.0
  * @apiName             deviceType Select
  * @apiGroup            DeviceType
@@ -100,7 +100,7 @@
  */
 
 /**
- * @api                 {put}           /deviceTypes/:id 기기 종류 수정
+ * @api                 {put}           /deviceTypes/:id c.기기 종류 수정
  * @apiVersion          0.1.0
  * @apiName             deviceType update
  * @apiGroup            DeviceType
@@ -154,7 +154,7 @@
  */
 
  /**
- * @api                 {delete}           /deviceTypes/:id 기기 종류 삭제
+ * @api                 {delete}           /deviceTypes/:id d.기기 종류 삭제
  * @apiVersion          0.1.0
  * @apiName             deviceType delete
  * @apiGroup            DeviceType

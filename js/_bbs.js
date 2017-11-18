@@ -1,6 +1,6 @@
 
 /**
- * @api                 {post}           /bbs 게시판 등록 
+ * @api                 {post}           /bbs a.게시판 등록 
  * @apiVersion          0.1.0
  * @apiName             bbs regist
  * @apiGroup            Bbs
@@ -43,7 +43,7 @@
 */
 
 /**
- * @api                 {get}           /bbs/:id 게시판 조회 
+ * @api                 {get}           /bbs/:id b.게시판 조회 
  * @apiVersion          0.1.0
  * @apiName             bbs select
  * @apiGroup            Bbs
@@ -85,7 +85,7 @@
 */
 
 /**
- * @api                 {put}           /bbs/:id 게시판 수정 
+ * @api                 {put}           /bbs/:id c.게시판 수정 
  * @apiVersion          0.1.0
  * @apiName             bbs update
  * @apiGroup            Bbs
@@ -130,7 +130,7 @@
 */
 
 /**
- * @api                 {delete}           /bbs/:id 게시판 삭제 
+ * @api                 {delete}           /bbs/:id d.게시판 삭제 
  * @apiVersion          0.1.0
  * @apiName             bbs delete
  * @apiGroup            Bbs

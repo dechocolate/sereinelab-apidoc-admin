@@ -5,7 +5,7 @@
 
 
 /**
- * @api                 {post}           /admins/login 관리자 로그인
+ * @api                 {post}           /admins/login a.관리자 로그인
  * @apiVersion          0.1.0
  * @apiName             admin login
  * @apiGroup            Admin
@@ -33,7 +33,7 @@
  */
 
  /**
- * @api                 {post}           /admins/login 관리자 로그아웃
+ * @api                 {post}           /admins/login b.관리자 로그아웃
  * @apiVersion          0.1.0
  * @apiName             admin logout
  * @apiGroup            Admin
