@@ -1,6 +1,6 @@
 /**
  * @apiDefine adminError
- * @apiError Error  parameter error 401
+ * @apiError 401Error  AUTHORIZATION_REQUIRED
  */
 
 
