@@ -18,11 +18,5 @@
  *
  * @apiParam             id                         설문답변 아이디
 
- * @apiSuccessExample
- *  HTTP/1.1 200 OK
-
-    {
-    }
-
  * @apiUse           adminError
  */

@@ -142,7 +142,7 @@
 
 
  /**
- * @api                 {delete}           /contractProducts/:id d.캡슐 삭제
+ * @api                 {delete}           /contractProducts/:id d.약정별 상품 삭제
  * @apiVersion          0.1.0
  * @apiName             contractProduct delete
  * @apiGroup            ContractProduct

@@ -42,7 +42,7 @@
  * Creates a new instance in issueAnswers of this model
  *
  * 
- * @apiParam    {ObjectId}      issueId              이슈 아이디
+ * @apiParam    {ObjectId}      id              이슈 아이디
  * @apiParam    {String}        text                 이슈 답변 내용    
  * 
  * 
