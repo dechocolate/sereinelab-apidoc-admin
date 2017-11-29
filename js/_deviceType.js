@@ -1,6 +1,6 @@
 
 /**
- * @api                 {get}           /deviceTypes a.기기 종류 등록
+ * @api                 {post}           /deviceTypes a.기기 종류 등록
  * @apiVersion          0.1.0
  * @apiName             deviceType List
  * @apiGroup            DeviceType
@@ -111,6 +111,7 @@
  *  {
  *    "Authorization": "accessTokenId"
  *  } 
+ * 
  * @apiDescription
  * Find all instances of the model matched by filter from the data 
  *
