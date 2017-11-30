@@ -306,7 +306,7 @@
 
 
 /**
- * @api                 {post}           /surveyQuestions/:id/surveyItems i.설문지 질문 선택사항 작성
+ * @api                 {post}           /surveyQuestions/:id/surveyQuestionItem i.설문지 질문 선택사항 작성
  * @apiVersion          0.1.0
  * @apiName             surveyItems write
  * @apiGroup            Survey
@@ -344,9 +344,9 @@
 */
 
 /**
- * @api                 {get}           /surveyQuestions/:id/surveyItems j.설문지 질문 선택사항 조회
+ * @api                 {get}           /surveyQuestions/:id/surveyQuestionItem j.설문지 질문 선택사항 조회
  * @apiVersion          0.1.0
- * @apiName             surveyItems select
+ * @apiName             surveyQuestionItem select
  * @apiGroup            Survey
  *
  * @apiPermission       Admin
@@ -360,8 +360,6 @@
  * Queries surveyQuestions of survey.
  *
  * @apiParam          {ObjectId}        id             설문지 질문 아이디  
- * @apiParam          {String}        text           질문 선택사항 텍스트 
- * @apiParam          {String}        value          질문 선택사항 값 
  *   
  * @apiSuccess          {ObjectId}      id                          설문지 질문 아이디 
  * @apiSuccess          {ObjectId}      surveyQuestionId            질문 선택사항 아이디
@@ -392,9 +390,9 @@
 */
 
 /**
- * @api                 {put}           /surveyQuestions/:id/surveyItems/:fk k.설문지 질문 선택사항 수정
+ * @api                 {put}           /surveyQuestions/:id/surveyQuestionItem/:fk k.설문지 질문 선택사항 수정
  * @apiVersion          0.1.0
- * @apiName             surveyItems update
+ * @apiName             surveyQuestionItem update
  * @apiGroup            Survey
  * 
  * @apiPermission       Admin
@@ -428,9 +426,9 @@
 */
 
 /**
- * @api                 {delete}           /surveyQuestions/:id/surveyItems/:fk l.설문지 질문 선택사항 삭제
+ * @api                 {delete}           /surveyQuestions/:id/surveyQuestionItem/:fk l.설문지 질문 선택사항 삭제
  * @apiVersion          0.1.0
- * @apiName             surveyItems delete
+ * @apiName             surveyQuestionItem delete
  * @apiGroup            Survey
  * 
  * @apiPermission       Admin
